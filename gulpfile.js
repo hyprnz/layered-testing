@@ -51,7 +51,7 @@ function testWithMocha(dir, testType, options) {
         .src(['**/*.' + testType + '.js'])
         .pipe(mocha({
             ui: "bdd",
-            reporter: "dot"
+            reporter: "spec"
         }))
         .once('end', function () {
             process.exit();

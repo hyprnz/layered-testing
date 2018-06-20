@@ -83,25 +83,18 @@ gulp.task('server-run', ["compile"], function (cb) {
 // GENERAL TESTS
 
 gulp.task('micro-tests', ['compile'], function () {
-    const env = makeAnimalGroupEnv("local");
-    return testWithMocha(dir.dist, testTypes.micro, {env: env});
+    return testWithMocha(dir.dist, testTypes.micro, {env: []});
 });
 
 gulp.task('integration-tests', ['compile'], function () {
-    return testWithMocha(dir.animalGroupService, testTypes.integration, {env: makeAnimalGroupEnv("development")});
+    return testWithMocha(dir.animalGroupService, testTypes.integration, {env: []});
 });
 
-gulp.task('cucumber-tests', ['compile'], function () {
+gulp.task('system-tests', ['compile'], function () {
     process.chdir(dir.dist);
-    process.env = makeAnimalGroupEnv("local");
     return gulp.src('*features/*').pipe(cucumber({
         'steps': '*features/matingStartDate/steps/*.js',
         'support': '*features/matingStartDate/support/*.js',
         'tags': '@current'
     }));
 });
-
-exports.makeAnimalGroupEnv = makeAnimalGroupEnv;
-
-exports.developmentTypes = developmentTypes;
-

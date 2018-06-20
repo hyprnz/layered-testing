@@ -1,0 +1,43 @@
+{
+  "name": "lic-animal-group",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hyprnz/layered-testing.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp micro-tests",
+    "cukes": "gulp cucumber-tests",
+    "gulp": "gulp",
+    "compile": "gulp compile",
+    "lint": "gulp tslint"
+  },
+  "author": "HYPR",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "reflect-metadata": "~0.1.10"
+  },
+  "devDependencies": {
+    "chai": "~4.1.2",
+    "chai-http": "3.0.0",
+    "cucumber": "3.2.0",
+    "del": "~3.0.0",
+    "gulp": "~3.9.1",
+    "gulp-add-src": "~0.2.0",
+    "gulp-cucumber": "0.0.23",
+    "gulp-exec": "~2.1.3",
+    "gulp-mocha": "3.0.1",
+    "gulp-tslint": "~8.1.2",
+    "gulp-typescript": "~3.2.3",
+    "mocha": "~3.5.3",
+    "run-sequence": "~2.2.0",
+    "ts-loader": "~2.3.7",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.8.0",
+    "typemoq": "~2.1.0",
+    "types": "~0.1.1",
+    "typescript": "2.7.2"
+  }
+}

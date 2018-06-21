@@ -38,10 +38,8 @@ const dir = {
 const testTypes = {
     micro: "micro",
     integration: "integration",
-    component: "component",
     system: "sys",
-    deploy: "deploy",
-    data: "data"
+    all: "*",
 };
 
 function testWithMocha(dir, testType, options) {
@@ -98,3 +96,8 @@ gulp.task('system-tests', ['compile'], function () {
         'tags': '@current'
     }));
 });
+
+gulp.task('tests', ['compile'], function () {
+    return testWithMocha(dir.dist, testTypes.all, {env: []});
+});
+

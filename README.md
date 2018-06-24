@@ -6,7 +6,7 @@ Once node is installed you should be able to run
 
 ```npm install --no-optional```
 
-to install required packages for running tests.
+from the layered-testing directory to install required packages for running tests.
 
 You can then run tests using
 

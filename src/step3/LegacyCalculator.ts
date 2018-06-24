@@ -1,17 +1,11 @@
 import {PlannedStart} from "../PlannedStart";
-import {buildWeek, Week} from "./Week";
+import {plannedStartFactory, PlannedStartMaker} from "./PlannedStartMaker";
 
 export class LegacyCalculator {
-    constructor(private weekBuilder: (dates: Array<Date>, minimumCount: number) => Week = buildWeek) {
+    constructor(private factory: (dates: Array<Date>, minimumCount: number) => PlannedStartMaker = plannedStartFactory) {
     }
 
     calculate(dates: Array<Date>, minimumCount = 1): PlannedStart {
-        const week = this.weekBuilder(dates, minimumCount);
-
-        if (week.isValid()) {
-            return {startTime: week.secondWeekAsTime(), count: week.countForSecondWeek()}
-        }
-
-        return {startTime: 0, count: 0};
+        return this.factory(dates, minimumCount).make();
     }
 }

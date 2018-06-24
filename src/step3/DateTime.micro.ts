@@ -1,7 +1,7 @@
 import {expect} from "chai";
 import {oneWeek, withinOneWeekExcludingStart} from "./DateTime";
 
-describe("WeekCounter", () => {
+describe("DateTime", () => {
     const minDate = new Date(2018,3,20);
     const justAfterNow = new Date(minDate.getTime() + 1);
     const exactlyOneWeekAfter = new Date(minDate.getTime() + oneWeek);

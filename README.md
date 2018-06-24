@@ -15,55 +15,56 @@ You can then run tests using
 You should then see an output telling you the tests have passed:
 
 ```
-   [14:06:37] Starting 'clean'...
-   [14:06:37] Finished 'clean' after 10 ms
-   [14:06:37] Starting 'compile'...
-   [14:06:38] Finished 'compile' after 1.34 s
-   [14:06:38] Starting 'tests'...
-   
-   
-     LegacyCalculator
-       calculate
-         ✓ empty
-         ✓ with one date
-         ✓ with many dates
-   
-     LegacyCalculator
-       calculate
-         ✓ empty
-         ✓ with one date
-         ✓ with many dates
-   
-     WeekCounter
-       oneWeek
-         ✓ one week later
-       withinOneWeekFromStart
-         ✓ no dates
-         ✓ same date
-         ✓ just after now
-         ✓ exactly one week later
-         ✓ more than one week later
-         ✓ with many dates
-   
-     LegacyCalculator integration
-       calculate
-         ✓ empty
-         ✓ with one date
-         ✓ with many dates
-   
-     LegacyCalculator mock example
-       calculate
-         ✓ make
-   
-     PlannedStartMaker
-       make
-         ✓ empty
-         ✓ with one valid date in second week
-       count
-         ✓ empty
-         ✓ with one valid date in second week
-         ✓ with one valid date in first and second week
-   
-   
-     22 passing (24ms) 
+[18:02:59] Using gulpfile ~/github/layered-testing/gulpfile.js
+[18:02:59] Starting 'clean'...
+[18:02:59] Finished 'clean' after 12 ms
+[18:02:59] Starting 'compile'...
+[18:03:00] Finished 'compile' after 1.34 s
+[18:03:00] Starting 'tests'...
+
+  
+  LegacyCalculator
+    calculate
+      ✓ empty
+      ✓ with one date
+      ✓ with many dates
+
+  LegacyCalculator
+    calculate
+      ✓ empty
+      ✓ with one date
+      ✓ with many dates
+
+  DateTime
+    oneWeek
+      ✓ one week later
+    withinOneWeekFromStart
+      ✓ no dates
+      ✓ same date
+      ✓ just after now
+      ✓ exactly one week later
+      ✓ more than one week later
+      ✓ with many dates
+
+  LegacyCalculator integration
+    calculate
+      ✓ empty
+      ✓ with one date
+      ✓ with many dates
+
+  LegacyCalculator mock example
+    calculate
+      ✓ make
+
+  PlannedStartMaker
+    make
+      ✓ empty
+      ✓ with one valid date in second week
+    count
+      ✓ empty
+      ✓ with one valid date in second week
+      ✓ with one valid date in first and second week
+
+
+  22 passing (24ms)
 ```

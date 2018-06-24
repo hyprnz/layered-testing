@@ -1,4 +1,4 @@
-# layered-testing
+# Layered Testing Workshop
 
 This workshop requires [node.js](https://nodejs.org/en/download/).
 

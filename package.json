@@ -15,7 +15,7 @@
     "lint": "gulp tslint"
   },
   "author": "HYPR",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "4.0.8",

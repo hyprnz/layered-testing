@@ -16,12 +16,9 @@
   },
   "author": "HYPR",
   "license": "UNLICENSED",
-  "dependencies": {
-    "reflect-metadata": "~0.1.10"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "4.0.8",
-    "@types/chai-http": "3.0.3",
     "@types/mocha": "~2.2.44",
     "chai": "~4.1.2",
     "chai-http": "3.0.0",

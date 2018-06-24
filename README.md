@@ -14,7 +14,8 @@ You can then run tests using
 
 You should then see an output telling you the tests have passed:
 
-```[14:06:37] Starting 'clean'...
+```
+   [14:06:37] Starting 'clean'...
    [14:06:37] Finished 'clean' after 10 ms
    [14:06:37] Starting 'compile'...
    [14:06:38] Finished 'compile' after 1.34 s
@@ -64,4 +65,5 @@ You should then see an output telling you the tests have passed:
          ✓ with one valid date in first and second week
    
    
-     22 passing (24ms)```
+     22 passing (24ms) 
+```

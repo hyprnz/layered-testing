@@ -1,10 +1,10 @@
 import {PlannedStart} from "../PlannedStart";
 
-let makeCount = function (dates: Array<Date>, startOfFirstWeek: number) {
+function withinOneWeekExcludingStart(dates: Array<Date>, startOfFirstWeek: number) {
     return dates
         .filter(x => x.getTime() > startOfFirstWeek && x.getTime() < startOfFirstWeek + (7 * 24 * 60 * 60 * 1000))
         .length;
-};
+}
 
 export class LegacyCalculator {
     calculate(dates: Array<Date>, requiredDays = 1): PlannedStart {
@@ -21,7 +21,7 @@ export class LegacyCalculator {
         const startOfFirstWeek = dates[0].getTime();
         const startOfSecondWeek = startOfFirstWeek + (7 * 24 * 60 * 60 * 1000);
 
-        const countsForFirstWeek = makeCount(dates, startOfFirstWeek);
+        const countsForFirstWeek = withinOneWeekExcludingStart(dates, startOfFirstWeek);
 
         const countsForSecondWeek = dates
             .filter(x => x.getTime() > startOfSecondWeek && x.getTime() < startOfSecondWeek + (7 * 24 * 60 * 60 * 1000))

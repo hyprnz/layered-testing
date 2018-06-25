@@ -31,3 +31,22 @@ describe("LegacyCalculator mock example", () => {
         });
     });
 });
+
+
+describe("LegacyCalculator fake example (to be completed)", () => {
+    describe("calculate", () => {
+        const date1 = new Date(2018, 0, 1);
+        const date2 = new Date(2018, 0, 10);
+        const date3 = new Date(2018, 0, 11);
+        const dates = [date3, date1, date2];
+
+
+        beforeEach(() => {
+
+        });
+
+        it("make", () => {
+
+        });
+    });
+});

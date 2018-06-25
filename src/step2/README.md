@@ -17,5 +17,6 @@ Once you have tests in place, replace the duplicate logic in LegacyCalculator wi
 Now write some tests to understand what (7 * 24 * 60 * 60 * 1000) means. Introduce a constant to replace all instances.
 Where should the new constant live? What is a good name for it?
 
-Advanced: Try encapsulating the remaining logic into another class that makes a PlannedStart. Write some tests to clarify your
+### Advanced:
+Try encapsulating the remaining logic into another class that makes a PlannedStart. Write some tests to clarify your
 understanding of how it works before you refactor. 

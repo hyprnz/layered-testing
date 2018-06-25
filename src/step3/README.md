@@ -17,7 +17,8 @@ Try and replicate the mock tests using a fake object instead.
 When would you use a fake vs. a mock as a test double?
 
 
-Advanced: How would you introduce a new type of planned start maker? 
+### Advanced:
+How would you introduce a new type of planned start maker? 
 Try and introduce a NoopPlannedStartmaker that always returns ```{startTime: 0, count: 0}```
 from the factory when the dates array contains 2018-01-01:00:00:00.
 

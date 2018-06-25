@@ -56,8 +56,6 @@ function testWithMocha(dir, testType, options) {
         });
 }
 
-// http://www.hacksparrow.com/difference-between-spawn-and-exec-of-node-js-child_process.html
-// http://stackoverflow.com/questions/20825157/using-spawn-function-with-node-env-production
 function spawnecute(dir, command, args, options) {
     process.chdir(dir);
     let child = spawn(command, args, options);
@@ -73,11 +71,6 @@ function spawnecute(dir, command, args, options) {
     );
 }
 
-gulp.task('server-run', ["compile"], function (cb) {
-    spawnecute(dir.animalGroupService, 'node', ['runAnimalGroup.js'], {env: makeAnimalGroupEnv("local")});
-});
-
-
 // GENERAL TESTS
 
 gulp.task('micro-tests', ['compile'], function () {
@@ -91,8 +84,8 @@ gulp.task('integration-tests', ['compile'], function () {
 gulp.task('system-tests', ['compile'], function () {
     process.chdir(dir.dist);
     return gulp.src('*features/*').pipe(cucumber({
-        'steps': '*features/matingStartDate/steps/*.js',
-        'support': '*features/matingStartDate/support/*.js',
+        'steps': '*features/steps/*.js',
+        'support': '*features/support/*.js',
         'tags': '@current'
     }));
 });

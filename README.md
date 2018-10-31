@@ -10,61 +10,87 @@ from the layered-testing directory to install required packages for running test
 
 You can then run tests using
 
-```npm run gulp tests```
+```npm run test```
 
 You should then see an output telling you the tests have passed:
 
 ```
-[18:02:59] Using gulpfile ~/github/layered-testing/gulpfile.js
-[18:02:59] Starting 'clean'...
-[18:02:59] Finished 'clean' after 12 ms
-[18:02:59] Starting 'compile'...
-[18:03:00] Finished 'compile' after 1.34 s
-[18:03:00] Starting 'tests'...
+> layered-testing@1.0.0 test C:\projects\hypr\workshops\layered-testing
+> npm run clean && npm run compile && npm run retest
 
-  
+
+> layered-testing@1.0.0 clean C:\projects\hypr\workshops\layered-testing
+> rimraf dist/**
+
+
+> layered-testing@1.0.0 compile C:\projects\hypr\workshops\layered-testing
+> tsc -p .
+
+
+> layered-testing@1.0.0 retest C:\projects\hypr\workshops\layered-testing
+> npm run retest:micro && npm run retest:integration
+
+
+> layered-testing@1.0.0 retest:micro C:\projects\hypr\workshops\layered-testing
+> mocha --exit "./dist/src/**/*.micro.js"
+
+
+
   LegacyCalculator
     calculate
-      ✓ empty
-      ✓ with one date
-      ✓ with many dates
+      √ empty
+      √ with one date
+      √ with many dates
 
   LegacyCalculator
     calculate
-      ✓ empty
-      ✓ with one date
-      ✓ with many dates
+      √ empty
+      √ with one date
+      √ with many dates
 
   DateTime
     oneWeek
-      ✓ one week later
+      √ one week later
     withinOneWeekFromStart
-      ✓ no dates
-      ✓ same date
-      ✓ just after now
-      ✓ exactly one week later
-      ✓ more than one week later
-      ✓ with many dates
-
-  LegacyCalculator integration
-    calculate
-      ✓ empty
-      ✓ with one date
-      ✓ with many dates
+      √ no dates
+      √ same date
+      √ just after now
+      √ exactly one week later
+      √ more than one week later
+      √ with many dates
 
   LegacyCalculator mock example
     calculate
-      ✓ make
+      √ make
+
+  LegacyCalculator fake example (to be completed)
+    calculate
+      √ make
 
   PlannedStartMaker
     make
-      ✓ empty
-      ✓ with one valid date in second week
+      √ empty
+      √ with one valid date in second week
     count
-      ✓ empty
-      ✓ with one valid date in second week
-      ✓ with one valid date in first and second week
+      √ empty
+      √ with one valid date in second week
+      √ with one valid date in first and second week
 
 
-  22 passing (24ms)
+  20 passing (60ms)
+
+
+> layered-testing@1.0.0 retest:integration C:\projects\hypr\workshops\layered-testing
+> mocha --exit "./dist/src/**/*.integration.js"
+
+
+
+  LegacyCalculator integration
+    calculate
+      √ empty
+      √ with one date
+      √ with many dates
+
+
+  3 passing (11ms)
 ```

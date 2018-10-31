@@ -10,7 +10,7 @@ from the layered-testing directory to install required packages for running test
 
 You can then run tests using
 
-```npm run gulp tests```
+```npm run test```
 
 You should then see an output telling you the tests have passed:
 

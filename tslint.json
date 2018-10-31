@@ -1,0 +1,70 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+      "trailing-comma": false,
+      "semicolon": false,
+      "whitespace": false,
+      "eofline": false,
+      "object-literal-sort-keys": false,
+      "member-access": false,
+      "ordered-imports": false,
+      "max-line-length": false,
+      "quotemark": false,
+      "arrow-parens": false,
+      "space-before-function-paren": false,
+      "comment-format": false,
+      "no-consecutive-blank-lines": false,
+      "no-trailing-whitespace": false,
+      "typedef-whitespace": false,
+      "space-within-parens": false,
+      "object-literal-shorthand": false,
+      "member-ordering": false,
+      "no-unused-expression": false,
+      "only-arrow-functions": false,
+      "no-shadowed-variable": false,
+      "array-type": [
+        true,
+        "generic"
+      ],
+      "prefer-const": false,
+      "interface-name": false,
+      "no-submodule-imports": false,
+      "align": [
+        false,
+        "parameters",
+        "statements"
+      ],
+      "no-namespace": false,
+      "no-string-literal": false,
+      "max-classes-per-file": false,
+      "no-default-export": false,
+      "no-empty-interface": false,
+      "no-implicit-dependencies": [
+        true,
+        "dev"
+      ],
+      "no-object-literal-type-assertion": false
+    },
+    "jsRules": {
+      "trailing-comma": false,
+      "semicolon": false,
+      "whitespace": false,
+      "eofline": false,
+      "object-literal-sort-keys": false,
+      "ordered-imports": false,
+      "max-line-length": false,
+      "quotemark": false,
+      "arrow-parens": false,
+      "space-before-function-paren": false,
+      "comment-format": false,
+      "no-consecutive-blank-lines": false,
+      "no-trailing-whitespace": false,
+      "member-ordering": false,
+      "no-unused-expression": false,
+      "only-arrow-functions": false,
+      "no-shadowed-variable": false,
+      "prefer-const": false,
+      "interface-name": false
+    }
+  }
+  

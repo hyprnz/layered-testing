@@ -9,6 +9,12 @@
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
     "experimentalDecorators": true,
-    "allowJs": true
-  }
+    "allowJs": true,
+    "outDir": "./dist",
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "gulpfile.js"
+  ]
 }

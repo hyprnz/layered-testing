@@ -1,67 +1,59 @@
-import * as TypeMoq from "typemoq";
-import {CtorWithArgs} from "typemoq/Common/Ctor";
-import {expect} from "chai";
-
-export class MoqsIt {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const TypeMoq = require("typemoq");
+const chai_1 = require("chai");
+class MoqsIt {
     // Use chai to test for deep equality so we get a useful diff in WebStorm.
-    deepEquals<T>(expected: T): T {
-        return TypeMoq.It.is<T>((actual: T) => expect(actual).eql(expected) && true);
+    deepEquals(expected) {
+        return TypeMoq.It.is((actual) => chai_1.expect(actual).eql(expected) && true);
     }
-
-    isValue(value: any) {
+    isValue(value) {
         return TypeMoq.It.isValue(value);
     }
-
     isAny() {
         return TypeMoq.It.isAny();
     }
-
-    is<T>(predicate: (x: T) => boolean) {
+    is(predicate) {
         return TypeMoq.It.is(predicate);
     }
 }
-
+exports.MoqsIt = MoqsIt;
 // Shortcuts to defining mocks with strict, where possible.
 // Strict means that an exception is thrown if a call is made with an argument that has no setup.
 // Loose means that undefined is returned automatically, which we don't want.
-
-export class Moqs {
-    verifies: Array<any> = [];
-
-    ofFn<U>(f: U): TypeMoq.IMock<U> {
+class Moqs {
+    constructor() {
+        this.verifies = [];
+    }
+    ofFn(f) {
         const mock = TypeMoq.Mock.ofInstance(f, TypeMoq.MockBehavior.Strict);
         this.verifies.push(mock);
         return mock;
     }
-
-    ofType<U>(targetConstructor?: CtorWithArgs<U>, ...targetConstructorArgs: Array<any>): TypeMoq.IMock<U> {
+    ofType(targetConstructor, ...targetConstructorArgs) {
         const shouldOverrideTarget = false;
-        const mock = TypeMoq.Mock.ofType<U>(targetConstructor, TypeMoq.MockBehavior.Strict, shouldOverrideTarget, ...targetConstructorArgs);
+        const mock = TypeMoq.Mock.ofType(targetConstructor, TypeMoq.MockBehavior.Strict, shouldOverrideTarget, ...targetConstructorArgs);
         this.verifies.push(mock);
         return mock;
     }
-
-    ofInterface<U>(): TypeMoq.IMock<U> {
-        const mock = TypeMoq.Mock.ofType<U>(undefined, TypeMoq.MockBehavior.Strict);
+    ofInterface() {
+        const mock = TypeMoq.Mock.ofType(undefined, TypeMoq.MockBehavior.Strict);
         this.verifies.push(mock);
         return mock;
     }
-
-    verifyAll(done?: any) {
+    verifyAll(done) {
         this.verifies.forEach(v => v.verifyAll());
         if (done) {
             done();
         }
         return null;
     }
-
-    notPromise(mock: TypeMoq.IMock<any>) {
+    notPromise(mock) {
         mock
             .setup(p => p.then)
             .returns(() => undefined);
     }
-
-    public static It: MoqsIt = new MoqsIt();
-    public static Times = TypeMoq.Times;
 }
-
+Moqs.It = new MoqsIt();
+Moqs.Times = TypeMoq.Times;
+exports.Moqs = Moqs;

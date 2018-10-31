@@ -11,7 +11,8 @@
     "experimentalDecorators": true,
     "allowJs": true,
     "outDir": "./dist",
-  },
+    "sourceMap": true
+   },
   "exclude": [
     "dist",
     "node_modules"

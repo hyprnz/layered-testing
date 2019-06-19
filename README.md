@@ -1,20 +1,33 @@
 # Layered Testing Workshop
 
-This workshop requires [node.js](https://nodejs.org/en/download/).
+This workshop requires [node.js](https://nodejs.org/en/download/). You should have at least version 10.14.2. Later versions are fine, too.
 
-Once node is installed you should be able to run 
+To confirm that you have the correct minimum versions installed, use these commands in a terminal, e.g. PowerShell or Bash:
 
-```npm install --no-optional```
+```node -v```
 
-from the layered-testing directory to install required packages for running tests.
+This prints the version. This should be at least 10.14.2. Next confirm the version of npm that you have installed. `npm` is the node
+package manager and is included in `node.js`. Execute the following command:
 
-You can then run tests using
+```npm -v```
+
+This prints the version. This should be at least 6.9.0. Later versions are fine, too.
+
+Once you have `node.js` installed and confirmed that you have the minimum requirements, clone this repository. Then
+open a terminal window in the local clone, i.e. in the directory `layered-testing`. In the terminal, you should be
+able to execute
+
+```npm ci```
+
+to install required packages for running tests. This may take some time depending on the speed of your internet connection.
+
+Once the command completes you can execute the tests using
 
 ```npm run test```
 
-You should then see an output telling you the tests have passed:
+You should then see an output similar to the following confirming the tests have passed:
 
-```
+```bash
 > layered-testing@1.0.0 test C:\projects\hypr\workshops\layered-testing
 > npm run clean && npm run compile && npm run retest
 

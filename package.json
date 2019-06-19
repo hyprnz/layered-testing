@@ -1,38 +1,39 @@
 {
-  "name": "layered-testing",
-  "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:hyprnz/layered-testing.git"
-  },
-  "main": "app.js",
-  "scripts": {
-    "clean": "rimraf dist/**",
-    "compile": "tsc -p .",
-    "retest": "npm run retest:micro && npm run retest:integration",
-    "retest:micro": "mocha --exit \"./dist/src/**/*.micro.js\"",
-    "retest:integration": "mocha --exit \"./dist/src/**/*.integration.js\"",
-    "test": "npm run clean && npm run compile && npm run retest",
-    "test:micro": "npm run clean && npm run compile && npm run retest:micro",
-    "test:integration": "npm run clean && npm run compile && npm run retest:integration",
-    "lint": "tslint --force -c tslint.json 'src/**/*.ts'"
-  },
-  "author": "HYPR",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/chai": "4.0.8",
-    "@types/mocha": "~2.2.44",
-    "chai": "~4.1.2",
-    "del": "~3.0.0",
-    "mocha": "~5.2.0",
-    "run-sequence": "~2.2.0",
-    "ts-loader": "~2.3.7",
-    "ts-node": "~3.2.0",
-    "tslint": "~5.8.0",
-    "typemoq": "~2.1.0",
-    "types": "~0.1.1",
-    "typescript": "~3.4.2"
-  }
+    "name": "layered-testing",
+    "version": "1.0.0",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:hyprnz/layered-testing.git"
+    },
+    "main": "app.js",
+    "scripts": {
+        "clean": "rimraf dist/**",
+        "compile": "tsc -p .",
+        "retest": "npm run retest:micro && npm run retest:integration",
+        "retest:micro": "mocha --exit \"./dist/src/**/*.micro.js\"",
+        "retest:integration": "mocha --exit \"./dist/src/**/*.integration.js\"",
+        "test": "npm run clean && npm run compile && npm run retest",
+        "test:micro": "npm run clean && npm run compile && npm run retest:micro",
+        "test:integration": "npm run clean && npm run compile && npm run retest:integration",
+        "lint": "tslint --force -c tslint.json 'src/**/*.ts'",
+        "update-all": "npx -p npm-check-updates ncu -u && npm install"
+    },
+    "author": "Hypr Innovation",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/chai": "4.1.7",
+        "@types/mocha": "5.2.7",
+        "chai": "4.2.0",
+        "del": "4.1.1",
+        "mocha": "6.1.4",
+        "run-sequence": "2.2.1",
+        "ts-loader": "6.0.3",
+        "ts-node": "8.3.0",
+        "tslint": "5.17.0",
+        "typemoq": "2.1.0",
+        "types": "0.1.1",
+        "typescript": "3.5.2"
+    }
 }

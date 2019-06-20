@@ -16,6 +16,9 @@
         "test": "npm run clean && npm run compile && npm run retest",
         "test:micro": "npm run clean && npm run compile && npm run retest:micro",
         "test:integration": "npm run clean && npm run compile && npm run retest:integration",
+        "test:micro-step-1": "npm run clean && npm run compile && mocha --exit \"./dist/src/step1/**/*.micro.js\"",
+        "test:micro-step-2": "npm run clean && npm run compile && mocha --exit \"./dist/src/step2/**/*.micro.js\"",
+        "test:micro-step-3": "npm run clean && npm run compile && mocha --exit \"./dist/src/step3/**/*.micro.js\"",
         "lint": "tslint --force -c tslint.json 'src/**/*.ts'",
         "update-all": "npx -p npm-check-updates ncu -u && npm install"
     },

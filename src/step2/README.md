@@ -9,6 +9,10 @@ All tests will be automatically picked up when you run:
 
 ```npm run test```
 
+Or you can run micro tests for a single step
+
+```npm run test:micro-step-2```
+
 Try writing some micro tests for the new function. Hint - if you look in step 3 you will see some tests you can reference
 but see how far you can get first! 
 

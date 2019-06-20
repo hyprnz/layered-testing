@@ -10,10 +10,10 @@ Our goal is to refactor the existing code to a point where it is clearer where t
 
 ## Step one 
 
-Look at the code and identify refactorings that make the code easier to read and understand.
+We spend 60-70% of our time as developers reading code, why is this code hard to read and understand?
+
+Look at the code and identify code smells. How could you refactor to make the code easier to read and understand?
 
 Why is the legacy calculator doing too much?
 
 What are some of the concerns that could be split out?
-
-We spend 60-70% of our time as developers reading code, why is this code hard to read and understand?
